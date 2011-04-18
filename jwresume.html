@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>William Rice - Composer</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<!--<script type="text/javascript" src="assets/jwplayer/jwplayer.js"></script>-->
+	<script type="text/javascript" src="jwresume.js"></script>
+
+	<style type="text/css">
+		body {
+			background: #121216;
+		}
+		#top-player-wrapper {
+			width: 956px;
+			height: 340px;
+			padding: 7px;
+			margin: 50px auto;
+			background: #6e7176;
+			border-radius:7px;
+			-moz-border-radius:7px;
+		}
+		.debug-output {
+			margin: 5px auto;
+			color: #999;
+			text-align: center;
+			text-decoration: none;
+		}
+	</style>
+
+</head>
+<body>
+<div id="top-player-wrapper">
+	<div id="corePlayerContainer">Please install the Flash Plugin</div> 
+</div>
+
+<div class="debug-output">
+	<input type="button" value="reset to default playlist & selected item & stop" onClick="jwresume.Reset();">
+	<br>&nbsp;
+</div>
+
+<div class="debug-output">
+	<input type="button" value="add new playlist item(s), without duplication & play first new item" onClick="
+		jwresume.addPlaylist('assets/music/4.xml');
+	">
+	<br>&nbsp;
+</div>
+
+<div class="debug-output">
+	<a href="assets/music/1.mp3">assets/music/1.mp3</a><br>&nbsp;
+	<a href="http://www.google.co.uk/">http://www.google.co.uk/</a><br>&nbsp;
+	<a href="assets/music/2.mp3">assets/music/2.mp3</a><br>&nbsp;
+	<a href="assets/music/3.mp3">assets/music/3.mp3</a><br>&nbsp;
+	<a href="assets/music/4.mp3">assets/music/4.mp3</a><br>&nbsp;
+</div>
+
+<div class="debug-output" id="debug-text"></div>
+
+
+<script type="text/javascript"> 
+	/*here we call jwresume to recall a cookie if available*/
+	/*jwresume.Recall(defaultPlaylist, defaultItem);*/
+	jwresume.Recall('assets/music/playlist.xml',0);
+	
+	/* this function gets called by JW resume to build our player */
+	function buildCorePlayer() {	
+		var flashvars = {
+			repeat: 'always',
+			controlbar: 'over',
+			'controlbar.idlehide': 'false',
+			playlist: "right",
+			playlistsize: 326,
+			stretching: 'fill',
+			skin: 'assets/jwskins/glowminithumbs.zip',
+			wmode: 'transparent'
+		};
+		var params = {
+			allowfullscreen: 'true',
+			allowscriptaccess: 'always',
+			bgcolor: '000000'
+		};
+		/*your ID and name, MUST BOTH be corePlayer to use jwresume*/
+		var attributes = {
+			id: 'corePlayer',
+			name: 'corePlayer'
+		};
+		swfobject.embedSWF('assets/jwplayer/player.swf', 'corePlayerContainer', '956', '340', '9.0.115', 'false', flashvars, params, attributes);
+	}
+	
+
+</script>
+
+</body>
+
+</html>
