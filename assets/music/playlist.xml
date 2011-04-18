@@ -1,0 +1,34 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+	<trackList>
+	
+		<track>
+			<title>Ident Concept: Light Foundry</title>
+			<annotation>an orchestral ident composed for a brand new film production company based in London</annotation>
+			<location>assets/music/1.mp3</location>
+			<image>assets/music/1.jpg</image>
+		</track>
+		
+		<track>
+			<title>Endless Hands of Time</title>
+			<annotation>an epic orchestral cue I wrote for BBC Wonders of the Universe featuring custom wristwatch samples</annotation>
+			<location>assets/music/2.mp3</location>
+			<image>assets/music/2.jpg</image>
+		</track>
+		
+		<track>
+			<creator>William Rice</creator>
+			<title>Into The Desert</title>
+			<annotation>a solo piece performed on a duduk which I recently imported from Armenian player Gevorg Dabaghan</annotation>
+			<location>assets/music/4.mp3</location>
+			<image>assets/music/4.jpg</image>
+		</track>ef
+		
+		<track>
+			<title>Hollywood Strings</title>
+			<annotation>a Hollywood Strings demo of a Hans Zimmer cue from Frost/Nixon featuring the solo cello from LASS</annotation>
+			<location>assets/music/3.mp3</location>
+			<image>assets/music/3.jpg</image>
+		</track>
+
+	</trackList>
+</playlist>
